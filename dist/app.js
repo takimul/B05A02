@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
+const auth_routes_1 = __importDefault(require("./modules/auth/auth.routes"));
+const user_routes_1 = __importDefault(require("./modules/user/user.routes"));
+const vehicle_routes_1 = __importDefault(require("./modules/vehicles/vehicle.routes"));
+const booking_routes_1 = __importDefault(require("./modules/bookings/booking.routes"));
+const db_1 = __importDefault(require("./config/db"));
+(0, db_1.default)();
+const app = (0, express_1.default)();
+app.use((0, cors_1.default)());
+app.use(express_1.default.json());
+app.use("/api/v1/auth", auth_routes_1.default);
+app.use("/api/v1/users", user_routes_1.default);
+app.use("/api/v1/vehicles", vehicle_routes_1.default);
+app.use("/api/v1/bookings", booking_routes_1.default);
+app.get("/", (_req, res) => res.send("Welcome to  Vehicle Rental API server "));
+exports.default = app;

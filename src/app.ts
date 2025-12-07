@@ -15,7 +15,6 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/vehicles", vehicleRoutes);
 app.use("/api/v1/bookings", bookingRoutes);
-
 app.get("/", (_req, res) => res.send("Welcome to  Vehicle Rental API server "));
 
 export default app;
