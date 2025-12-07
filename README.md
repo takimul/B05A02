@@ -1,8 +1,8 @@
-# 🚗 Vehicle Rental Management System – Backend (Express + PostgreSQL)
+# Vehicle Rental Management System – Backend (Express + PostgreSQL)
 
 A complete backend API for managing a vehicle rental business, including authentication, user roles, vehicle management, and booking logic with automated availability updates.
 
-🔗 **Live API URL:** _Add your deployed link here_  
+🔗 **Live API URL:** https://b05-a02.vercel.app/
 📦 **Tech Stack:** Node.js, Express.js, PostgreSQL, JWT, TypeScript
 
 ---
@@ -62,8 +62,8 @@ A complete backend API for managing a vehicle rental business, including authent
 ### **1. Clone the repository**
 
 ```bash
-git clone https://github.com/yourname/vehicle-rental-backend.git
-cd vehicle-rental-backend
+git clone https://github.com/takimul/B05A02.git
+cd B05A02
 ```
 
 ### **2. Install dependencies**
